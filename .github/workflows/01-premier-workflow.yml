@@ -1,10 +1,13 @@
 name: Premier workflow
 
-on: push
+on:
+  push:
+    branches: ["main"]
+    tags: ["v*"]
 
 jobs:
   dire-bonjour:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher un message
-        run: echo "Bonjour depuis GitHub Actions !"
+        run: echo "Push sur main ou tag de version"
